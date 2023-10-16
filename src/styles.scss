@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+$main-color:#0aad0a;
+$light-color:#f0f3f2;
+$shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+$font-family:'Encode Sans Expanded', sans-serif;
+$rating-color:#ffc908;
+$white-color: #FFF;
+
+
+body{
+    font-family: $font-family;
+}
+.rating-color
+{
+    color: $rating-color;
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product:hover
+{
+    box-shadow: $shadow;
+    border: solid 1px $main-color;
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: $main-color;
+}
+.bg-main
+{
+    background-color: $main-color !important;
+}
+.bg-main-light 
+{
+    background-color: $light-color !important;
+}
+.main-btn{
+    background-color: $main-color;
+    color: $white-color;
+    border-radius: 5px;
+    border: unset;
+    cursor: pointer;
+    padding: 4px 8px;
+     
+    &:disabled{
+        background-color: #078e076c;
+        color: #ffffff9c;
+        cursor: not-allowed;
+    }
+}.product{
+    box-shadow: $shadow !important;
+    border:1px solid $main-color !important;
+    padding: 4px;
+    border-radius: 5px;
+}
+.active-link{
+    background-color: $main-color;
+    border-radius: 5px;
+    color: $white-color;
+}

@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">
+            <img src="./assets/images/freshcart-logo.svg" alt="freshcart-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" routerLink="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" routerLink="/cart">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" routerLink="/products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" routerLink="/categories">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" routerLink="/brands">Brands</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+                <li class="nav-item d-flex gap-3 me-3">
+                    <a href="">
+                        <li class="fab fa-instagram"></li>
+                    </a>
+                    <a href="">
+                        <li class="fab fa-facebook"></li>
+                    </a>
+                    <a href="">
+                        <li class="fab fa-tiktok"></li>
+                    </a>
+                    <a href="">
+                        <li class="fab fa-twitter"></li>
+                    </a>
+                    <a href="">
+                        <li class="fab fa-youtube"></li>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <span (click)="signOut()" role="button">SignOut</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
