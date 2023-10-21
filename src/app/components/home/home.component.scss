@@ -1,0 +1,12 @@
+.product{
+    overflow: hidden;
+    .main-btn{
+        transform: translateY(150%);
+        transition: 0.8s;
+    }
+    &:hover{//hovering on product
+        .main-btn{
+            transform: translateY(0%);
+        }
+    }
+}

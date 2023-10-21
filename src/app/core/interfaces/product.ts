@@ -4,6 +4,7 @@ export interface Product {
     imageCover: string
     category: CategoryProd
     ratingsAverage: number
+    _id?:string
 }
 
 export interface CategoryProd{

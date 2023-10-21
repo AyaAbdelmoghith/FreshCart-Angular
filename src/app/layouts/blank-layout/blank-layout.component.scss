@@ -1,5 +1,26 @@
+$main-color: #0aad0a;
 :host{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+.main-section{
+    padding-top: 80px;
+}
+.btn-up{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:  10px;
+    background-color: $main-color;
+    border: 0;
+    color:#fff;
+    font-size: 20px;
+
 }

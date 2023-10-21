@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { authGuard } from './core/guard/auth.guard';
 
 const routes: Routes = [
+  //blank
   {
     path: '',
     canActivate:[authGuard],
@@ -24,6 +25,10 @@ const routes: Routes = [
         loadComponent: () => import('./components/products/products.component').then((m) => m.ProductsComponent), title:"Products"
       },
       {
+        path: 'productdetails/:id',
+        loadComponent: () => import('./components/details/details.component').then((m) => m.DetailsComponent), title:"ProductDetails"
+      },
+      {
         path: 'brands',
         loadComponent: () => import('./components/brands/brands.component').then((m) => m.BrandsComponent), title:"Brands"
       },
@@ -33,6 +38,7 @@ const routes: Routes = [
       },
     ]
   },
+  //auth
   {
     path: '',
     loadComponent: () => import('./layouts/auth-layout/auth-layout.component').then((m) => m.AuthLayoutComponent),
@@ -50,6 +56,7 @@ const routes: Routes = [
       },
     ]
   },
+  //notFound
   {
     path: '**',
     loadComponent: () => import('./components/notfound/notfound.component').then((m) => m.NotfoundComponent), title:"Not Found"
