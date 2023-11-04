@@ -24,13 +24,13 @@ a , a:hover{
     text-decoration: none;
 }
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 15px;
 }
 ::-webkit-scrollbar-track{
-    color: $light-color;
+    background-color: $light-color;
 }
 ::-webkit-scrollbar-thumb{
-    color: $main-color;
+    background-color: $main-color;
 }
 .product:hover
 {
@@ -83,9 +83,63 @@ a , a:hover{
     border:1px solid $main-color !important;
     padding: 4px;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    &:hover{
+        .heart{
+            right:5px;
+        }
+    }
+    .heart{
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: -50px;
+    z-index: 99;
+    cursor: pointer;
+    transition: right 0.7s;
+    }
 }
 .active-link{
     background-color: $main-color;
     border-radius: 5px;
     color: $white-color;
+}
+
+.product{
+    .main-btn{
+        transform: translateY(150%);
+        transition: 0.8s;
+    }
+    &:hover{//hovering on product
+        .main-btn{
+            transform: translateY(0%);
+        }
+    }
+}
+// .heart{
+//     font-size: 30px;
+//     color: red;
+//     position: absolute;
+//     top: 5px;
+//     right: -50px;
+//     z-index: 99;
+//     cursor: pointer;
+//     transition: right 0.7s;
+// }
+
+.prod-details{
+    position: relative;
+    overflow: hidden;
+ .heart{
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 99;
+    cursor: pointer;
+    transition: right 0.7s;
+    }
 }

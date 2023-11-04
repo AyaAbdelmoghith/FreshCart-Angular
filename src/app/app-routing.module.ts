@@ -25,16 +25,44 @@ const routes: Routes = [
         loadComponent: () => import('./components/products/products.component').then((m) => m.ProductsComponent), title:"Products"
       },
       {
+        path: 'wishlist',
+        loadComponent: () => import('./components/wishlist/wishlist.component').then((m) => m.WishlistComponent), title:"Wishlist"
+      },
+      {
         path: 'productdetails/:id',
-        loadComponent: () => import('./components/details/details.component').then((m) => m.DetailsComponent), title:"ProductDetails"
+        loadComponent: () => import('./components/details/details.component').then((m) => m.DetailsComponent), title:"Product Details"
       },
       {
         path: 'brands',
         loadComponent: () => import('./components/brands/brands.component').then((m) => m.BrandsComponent), title:"Brands"
       },
       {
+        path: 'allorders',
+        loadComponent: () => import('./components/allorders/allorders.component').then((m) => m.AllordersComponent), title:"Allorders"
+      },
+      {
+        path: 'forgotpassword',
+        loadComponent: () => import('./components/forgotpassword/forgotpassword.component').then((m) => m.ForgotpasswordComponent), title:"Forgot Passwords"
+      },
+      {
+        path: 'payment/:id',
+        loadComponent: () => import('./components/payment/payment.component').then((m) => m.PaymentComponent), title:"Payment"
+      },
+      {
         path: 'categories',
         loadComponent: () => import('./components/categories/categories.component').then((m) => m.CategoriesComponent), title:"Categories"
+      },
+      {
+        path: 'categorydetails/:id',
+        loadComponent: () => import('./components/categorydetails/categorydetails.component').then((m) => m.CategorydetailsComponent), title:"Category Details"
+      },
+      {
+        path: 'brands',
+        loadComponent: () => import('./components/brands/brands.component').then((m) => m.BrandsComponent), title:"Brands"
+      },
+      {
+        path: 'branddetails/:id',
+        loadComponent: () => import('./components/branddetails/branddetails.component').then((m) => m.BranddetailsComponent), title:"Brand Details"
       },
     ]
   },
@@ -54,6 +82,10 @@ const routes: Routes = [
         path: 'register',
         loadComponent: () => import('./components/register/register.component').then((m) => m.RegisterComponent), title:"Register"
       },
+      {
+        path: 'forgotpass',
+        loadComponent: () => import('./components/forgotpassword/forgotpassword.component').then((m) => m.ForgotpasswordComponent), title:"Forgot Passwords"
+      }
     ]
   },
   //notFound

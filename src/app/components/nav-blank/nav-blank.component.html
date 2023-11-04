@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+<nav #navBar class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" routerLink="">
             <img src="./assets/images/freshcart-logo.svg" alt="freshcart-logo">
@@ -21,7 +21,22 @@
                     <a class="nav-link" routerLinkActive="active-link" routerLink="/brands">Brands</a>
                 </li>
             </ul>
+          
             <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="fas fa-user fa-2x text-main"></span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a routerLink="/forgotpassword" routerLinkActive="active-link"  class="dropdown-item">Forgot Password</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link position-relative" routerLink="/wishlist">
+                        <span class="fa-solid fa-heart fa-2x text-danger"></span>
+                        <span class="badge bg-success position-absolute top-0 end-0">{{wishListNum}}</span>
+                    </a>
+                </li> 
                 <li class="nav-item">
                     <a class="nav-link position-relative" routerLink="/cart">
                         <span class="fas fa-cart-shopping fa-2x text-main"></span>
@@ -47,7 +62,7 @@
                 </li>
                 <li class="nav-item">
                     <span (click)="signOut()" role="button">SignOut</span>
-                </li>
+                </li> 
             </ul>
         </div>
     </div>

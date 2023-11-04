@@ -10,7 +10,9 @@
             </owl-carousel-o>
         </div>
         <div class="col-md-9">
-           <div>
+           <div class="position-relative prod-details">
+            <span *ngIf="!wishListData.includes($any(productId))" (click)="addFav(productId)" class="fa-regular fa-heart heart"></span>
+            <span *ngIf="wishListData.includes($any(productId))" (click)="removeFav(productId)"class="fa-solid fa-heart heart"></span>
                 <h2 class="h5">{{productDetails.title}}</h2>
                 <p class="text-muted small">{{productDetails.description}}</p>
                 <span>{{productDetails.category.name}}</span>
@@ -19,7 +21,7 @@
                         {{productDetails.price | currency:'EGP'}}
                     </span>
                     <p class="mb-0">
-                        <span class="fas fa-star rating-color"></span>
+                        <span [class.rating-color]="productDetails.ratingsAverage >= num" *ngFor="let num of [1,2,3,4,5]" class="fas fa-star font-sm "></span>
                         {{productDetails.ratingsAverage}}
                     </p>
                 </div>

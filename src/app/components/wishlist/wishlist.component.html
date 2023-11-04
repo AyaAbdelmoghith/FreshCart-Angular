@@ -1,0 +1,28 @@
+<section class="py-4" *ngIf="products.length>0">
+    <h2>WishList Products</h2>
+    <div class="row g-4">
+        <div *ngFor="let product of products" class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="product h-100">
+                <span *ngIf="!wishListData.includes($any(product._id))" (click)="addFav(product._id)" class="fa-regular fa-heart heart"></span>
+                <span *ngIf="wishListData.includes($any(product._id))" (click)="removeFav(product._id)"class="fa-solid fa-heart heart"></span>
+
+                <header role="button" [routerLink]="['/productdetails', product._id]">
+                    <img class="w-100" [src]="product.imageCover" [alt]="product.title">
+                    <h3 class="h6">{{product.title |cutText : 3}}</h3>
+                    <h4 class="h6">{{product.category.name}}</h4>
+                    <div class="d-flex align-items-center justify-content-between small">
+                        
+                        <span class="font-sm">{{product.price | currency :'E£'}}</span>
+                        <span>
+                            <span [class.rating-color]="product.ratingsAverage >= num" *ngFor="let num of [1,2,3,4,5]" class="fas fa-star font-sm "></span>
+                            <span class="text-muted">{{product.ratingsAverage}}</span>
+                        </span>
+                    </div>
+                </header> 
+                <footer>
+                    <button (click)="addProduct(product._id,btnAdd)"#btnAdd class="main-btn w-100 py-2">+AddToCart</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</section> 
