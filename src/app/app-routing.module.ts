@@ -38,7 +38,7 @@ const routes: Routes = [
       },
       {
         path: 'allorders',
-        loadComponent: () => import('./components/allorders/allorders.component').then((m) => m.AllordersComponent), title:"Allorders"
+        loadComponent: () => import('./components/allorders/allorders.component').then((m) => m.AllordersComponent), title:"All Orders"
       },
       {
         path: 'forgotpassword',

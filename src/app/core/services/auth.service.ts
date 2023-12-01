@@ -9,6 +9,7 @@ export class AuthService {
   userInfo:any;
   constructor(private _HttpClient:HttpClient) { }
   baseUrl: string=`https://ecommerce.routemisr.com/api/v1/auth/`;
+  userId:string|null='';
   register(userData:object):Observable<any>{
     return this._HttpClient.post(this.baseUrl+`signup`,userData);
   }
@@ -20,6 +21,7 @@ export class AuthService {
     if(encode !==null){
       const decode=jwtDecode(encode);
       this.userInfo=decode;
+      this.userId=this.userInfo.id;
       console.log(this.userInfo,'info');
        
     }

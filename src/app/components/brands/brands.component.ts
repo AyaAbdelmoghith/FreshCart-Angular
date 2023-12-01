@@ -38,7 +38,7 @@ export class BrandsComponent implements OnInit {
         this.brands = response.data;
         this.limit = response.metadata.limit;
         this.currentPage = response.metadata.currentPage;
-        this.total = response.results;
+        this.total = response.results;      
       },
     });
   }

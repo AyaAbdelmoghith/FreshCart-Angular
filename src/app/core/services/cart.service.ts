@@ -40,4 +40,9 @@ export class CartService {
     },
     )
   }
+  getUserOrders(userId:string|null):Observable<any>{
+    return this._HttpClient.get(this.baseUrl+`/orders/user/${userId}`,{
+    },
+    )
+  }
 }
