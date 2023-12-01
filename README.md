@@ -1,4 +1,4 @@
-# EcommerceAnguler
+# FreshCart-Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
@@ -25,4 +25,37 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# FreshCart-Angular
+# FreshCart-Angular (Standalone Angular Project)
+Technologies used :
+- HTML ✅✅
+- CSS ✅✅
+- SCSS ✅✅
+- Bootstrap ✅✅
+- TypeScript✅✅
+- Angular ✅✅
+## Standalone Angular Project, FreshCart.
+Using :
+- Interceptor [header request - handle loading]
+- Guard
+- Interface
+- Service
+- Pipe
+- FormGroup
+- lazy loading routing & [Custom Layout]
+- ngx Toaster
+- ngx Spinner
+- ngx Pagination
+- API Data (post-get-delete-put)
+- JWT-decode
+- RxJS
+- Confirm Password [Custom Validation]
+- Component life cycle</br>
+Handling shopping, cart, wishlist, error page, authentication, updating user info[update logged user password, forget user password] and payments [Online Order].
+## Video
+
+
+https://github.com/AyaAbdelmoghith/FreshCart-Angular/assets/105630381/4b4d73a0-c03f-4a06-b29f-0b127c188b4c
+
+
+
+ 
